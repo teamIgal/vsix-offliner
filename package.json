@@ -1,0 +1,25 @@
+{
+  "name": "vsix-offliner",
+  "version": "1.0.0",
+  "description": "Pull Visual Studio Code extensions for local use",
+  "main": "src/index.mjs",
+  "bin": "src/index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "filenamify": "^5.1.1",
+    "globby": "^13.1.2",
+    "node-fetch": "^3.2.10",
+    "ovsx": "^0.5.1",
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "@types/filenamify": "^2.0.2",
+    "@types/globby": "^9.1.0",
+    "@types/node-fetch": "^2.6.2",
+    "@types/yargs": "^17.0.11"
+  }
+}

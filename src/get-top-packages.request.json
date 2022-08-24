@@ -1,0 +1,22 @@
+{
+    "method": "POST",
+    "url": "https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery",
+    "headers": {
+      "accept": "application/json;api-version=7.1-preview.1;excludeUrls=true",
+      "accept-language": "en-US,en;q=0.9",
+      "content-type": "application/json",
+      "sec-ch-ua": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin",
+      "x-requested-with": "XMLHttpRequest",
+      "x-tfs-session": "0db75b8a-dbf0-4794-9812-096e72c76f1e",
+      "x-vss-reauthenticationaction": "Suppress",
+      "cookie": "_ga=GA1.2.82633559.1611737447; VstsSession=%7B%22PersistentSessionId%22%3A%224ae2958a-2eb0-4092-bd4d-5ed0881e0a05%22%2C%22PendingAuthenticationSessionId%22%3A%2200000000-0000-0000-0000-000000000000%22%2C%22CurrentAuthenticationSessionId%22%3A%2200000000-0000-0000-0000-000000000000%22%2C%22SignInState%22%3A%7B%7D%7D; Gallery-Service-UserIdentifier=f79b77b1-40be-4112-af56-1830caa88a14; Market_SelectedTab=vscode; _ga=GA1.3.82633559.1611737447; MSFPC=GUID=869704c064664555bac7cf332d9eb1ff&HASH=8697&LV=202201&V=4&LU=1643198300266; mbox=PC#d7b48c8c2743493db99e6ca24eca2130.37_0#1686221314|session#dca4c84bd9c44d50b2f8e37fc1f63492#1652036476; MSCC=NR; _gid=GA1.2.245918867.1661247796; _gid=GA1.3.245918867.1661247796; _gat_UA-62780441-6=1",
+      "Referer": "https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categories&sortBy=Installs",
+      "Referrer-Policy": "strict-origin-when-cross-origin"
+    },
+    "body": "{\"assetTypes\":[\"Microsoft.VisualStudio.Services.Icons.Default\",\"Microsoft.VisualStudio.Services.Icons.Branding\",\"Microsoft.VisualStudio.Services.Icons.Small\"],\"filters\":[{\"criteria\":[{\"filterType\":8,\"value\":\"Microsoft.VisualStudio.Code\"},{\"filterType\":10,\"value\":\"target:\\\"Microsoft.VisualStudio.Code\\\" \"},{\"filterType\":12,\"value\":\"37888\"}],\"direction\":2,\"pageSize\":{{TOP_EXTENSIONS_AMOUNT}},\"pageNumber\":1,\"sortBy\":4,\"sortOrder\":0,\"pagingToken\":null}],\"flags\":870}"
+  }
