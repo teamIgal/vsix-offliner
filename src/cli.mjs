@@ -50,6 +50,18 @@ export const cli = yargs(hideBin(process.argv))
                 type: "string",
                 default: UPLOAD_DEFAULTS.EXTENSIONS_DIR
             },
+            "upload-retries": {
+                type: "number",
+                default: UPLOAD_DEFAULTS.UPLOAD_RETRIES
+            },
+            "upload-timeout-minutes": {
+                type: "number",
+                default: UPLOAD_DEFAULTS.UPLOAD_TIMEOUT_MIN
+            },
+            "upload-backoff-minutes": {
+                type: "number",
+                default: UPLOAD_DEFAULTS.UPLOAD_TIMEOUT_BACKOFF_MIN
+            },
         },
         uploadExtensionsInDir
     )

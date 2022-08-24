@@ -4,7 +4,10 @@ import {publish, createNamespace} from "ovsx";
 import {retryWithBackoff, EXTENSION_FILE_NAME_PARTS_SEPARATOR} from "./common.mjs";
 
 export const DEFAULTS = {
-    EXTENSIONS_DIR: "./extensions"
+    EXTENSIONS_DIR: "./extensions",
+    UPLOAD_TIMEOUT_MIN: 0.25,
+    UPLOAD_TIMEOUT_BACKOFF_MIN: 0.25,
+    UPLOAD_RETRIES: 5
 };
 
 async function uploadExtension(path, authOptions) {
@@ -22,7 +25,10 @@ async function uploadExtension(path, authOptions) {
     });
 }
 
-export async function uploadExtensionsInDir({dirPath, registryUrl, username, password}) {
+export async function uploadExtensionsInDir({
+    dirPath, registryUrl, username, password,
+    uploadRetries, uploadTimeoutMinutes, uploadBackoffMinutes
+}) {
     const authOptions = {registryUrl, username, password};
 
     // Get iterable of extension files.
@@ -38,9 +44,9 @@ export async function uploadExtensionsInDir({dirPath, registryUrl, username, pas
         try {
             await retryWithBackoff(
                 // Retry, backoff settings.
-                downloadRetries, 
-                downloadTimeoutMinutes, 
-                downloadBackoffMinutes, 
+                uploadRetries, 
+                uploadTimeoutMinutes, 
+                uploadBackoffMinutes, 
                 // Function.
                 uploadExtension,
                 // Parameters.
